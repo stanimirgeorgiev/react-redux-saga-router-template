@@ -1,0 +1,24 @@
+{
+  "name": "softuni",
+  "version": "0.0.1",
+  "description": "Test React-Redux-Redux-Saga App",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "redux-saga"
+  ],
+  "author": "Stanimir Georgiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App/issues"
+  },
+  "homepage": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App#readme"
+}
