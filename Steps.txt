@@ -5,10 +5,13 @@ Create npm module: npm create
 Added index.js
 Added external dependencies in package.json
 	"react": latest
-	"react-redux: latest
-	"react-redux-saga": latest
+	"redux: latest
+	"redux-saga": latest
 	"webpack": latest
-Add .gitignore file	
-Add webpack.config.js and its requiremnets
-Add webpack.dev-server.js and its requiremnets
-Add start to package.json: "webpack --progress --color --config webpack.dev-server.js"
+Add .gitignore file
+Add webpack.config.js and its requirements
+Add webpack.dev-server.js and its requirements
+Add start to package.json: "webpack-dev-server --progress --color --config webpack.dev-server.js"
+Add index.tpl.html
+Add folder structure
+Add 
