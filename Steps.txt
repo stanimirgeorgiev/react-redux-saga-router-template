@@ -1,3 +1,14 @@
 SoftUni
 Download install Node.js
+create git repo
 Create npm module: npm create
+Added index.js
+Added external dependencies in package.json
+	"react": latest
+	"react-redux: latest
+	"react-redux-saga": latest
+	"webpack": latest
+Add .gitignore file	
+Add webpack.config.js and its requiremnets
+Add webpack.dev-server.js and its requiremnets
+Add start to package.json: "webpack --progress --color --config webpack.dev-server.js"
