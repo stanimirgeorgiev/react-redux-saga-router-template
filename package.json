@@ -4,7 +4,7 @@
   "description": "Test React-Redux-Redux-Saga App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress --color --config webpack.dev-server.js",
+    "start": "webpack-dev-server --progress --color --config webpack.dev-server.js",
     "test": "test"
   },
   "repository": {
@@ -51,6 +51,8 @@
     "webpack-merge": "^4.1.4"
   },
   "devDependencies": {
-    "webpack-cli": "^3.1.2"
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
