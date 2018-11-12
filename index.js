@@ -28,7 +28,7 @@ const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
   <Provider store={store}>
     <div>
-			'Start'
+	  'Start'
     </div>
   </Provider>
 );

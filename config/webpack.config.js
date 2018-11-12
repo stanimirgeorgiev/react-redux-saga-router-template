@@ -1,10 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 // Root path for this project
 const ROOT = __dirname;
-
 
 module.exports = {
   context: ROOT,
