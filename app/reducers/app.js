@@ -1,1 +1,1 @@
-export const app = (state = {}, action) => {return state;};
+export const app = (state = {}, action) => state;

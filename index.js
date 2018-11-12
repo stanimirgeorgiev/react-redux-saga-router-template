@@ -23,7 +23,6 @@ const createRootSaga = function* (sagas) {
   }
 }
 
-
 const appDomId = 'root';
 const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
