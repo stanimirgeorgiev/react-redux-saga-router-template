@@ -11,7 +11,7 @@ Index.js is the entry point for the app.
 Index.tpl.html is the template used by webpack to bundle and create the final index.html page.
 
 ---
-### Build proccess is not implemented. 
+#### Build proccess is not implemented. 
 
 ---
-### Test framework is not implemented.
+#### Test framework is not implemented.
