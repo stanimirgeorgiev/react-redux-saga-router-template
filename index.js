@@ -9,6 +9,8 @@ import { fork } from 'redux-saga/effects'
 import rootSagas from './app/sagas/root-saga';
 import { app } from './app/reducers/app';
 
+import Todos from './app/views/todos';
+
 const reducers = app;
 const sagaMiddleware = createSagaMiddleware(rootSagas);
 const store = createStore(
@@ -28,7 +30,7 @@ const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
   <Provider store={store}>
     <div>
-	  'Start'
+	    <Todos />
     </div>
   </Provider>
 );

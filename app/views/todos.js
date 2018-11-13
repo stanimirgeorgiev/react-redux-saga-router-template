@@ -10,8 +10,8 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+    textAlign: 'left',
+    color: theme.palette.text.disabled,
   },
 });
 
@@ -20,12 +20,12 @@ function CenteredGrid(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={24}>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>xs=12</Paper>
+      <Grid container spacing={16}>
+        <Grid item xs={2}>
+          <Paper className={classes.paper}>xs=4</Paper>
         </Grid>
-        <Grid item xs={20}>
-          <Paper className={classes.paper}>xs=6</Paper>
+        <Grid item xs={8}>
+          <Paper className={classes.paper}>xs=8</Paper>
         </Grid>
       </Grid>
     </div>
