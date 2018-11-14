@@ -6,6 +6,8 @@ import { applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { fork } from 'redux-saga/effects'
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 import rootSagas from './app/sagas/root-saga';
 import { app } from './app/reducers/app';
 
@@ -29,9 +31,10 @@ const appDomId = 'root';
 const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
   <Provider store={store}>
-    <div>
-	    <Todos />
-    </div>
+    <React.Fragment>
+      <CssBaseline />
+      <Todos />
+    </React.Fragment>
   </Provider>
 );
 
