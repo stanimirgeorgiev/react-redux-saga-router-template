@@ -9,18 +9,17 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-import SimpleLineChart from './simple-line-chart';
+import SimpleBarChart from './simple-bar-chart';
 import SimpleTable from './simple-table';
 import { styles } from './todos-styles';
 
 class Dashboard extends React.Component {
   state = {
     open: true,
+    selectedUserId: null
   };
 
   handleDrawerOpen = () => {
@@ -28,7 +27,7 @@ class Dashboard extends React.Component {
   };
 
   handleDrawerClose = () => {
-    this.setState({ open: false });
+    this.setState({ open: false, selectedUserId: null });
   };
 
   render() {
@@ -61,11 +60,6 @@ class Dashboard extends React.Component {
             >
               Dashboard
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -81,23 +75,21 @@ class Dashboard extends React.Component {
             </IconButton>
           </div>
           <Divider />
-          <List>{mainListItems}</List>
-          <Divider />
-          <List>{secondaryListItems}</List>
+          <List>{mainListItems(classes, this)}</List>
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <Typography variant="h4" gutterBottom component="h2">
-            Orders
+            Statistics
           </Typography>
           <Typography component="div" className={classes.chartContainer}>
-            <SimpleLineChart />
+            <SimpleBarChart selectedUserId={this.state.selectedUserId}/>
           </Typography>
           <Typography variant="h4" gutterBottom component="h2">
-            Products
+            Users
           </Typography>
           <div className={classes.tableContainer}>
-            <SimpleTable />
+            <SimpleTable selectedUserId={this.state.selectedUserId}/>
           </div>
         </main>
       </div>

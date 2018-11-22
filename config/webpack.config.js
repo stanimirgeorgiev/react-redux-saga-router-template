@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// Root path for this project
 const ROOT = __dirname;
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Simple Test App',
-      template: '../index.tpl.html',
+      template: '../  index.tpl.html',
     })
   ],
   output: {
@@ -38,17 +37,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 1,
-            },
-          }
-        ],
+        use:['style-loader', 'css-loader'],
         include: [
-          path.resolve(ROOT, '../**')
+          path.resolve(ROOT, '../')
         ],
         exclude: [
           path.resolve(ROOT, '../node_modules'),

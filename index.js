@@ -12,6 +12,7 @@ import rootSagas from './app/sagas/root-saga';
 import { app } from './app/reducers/app';
 
 import Todos from './app/views/todos';
+import './css/styles.css';
 
 const reducers = app;
 const sagaMiddleware = createSagaMiddleware(rootSagas);
