@@ -14,4 +14,5 @@ Add webpack.dev-server.js and its requirements
 Add start to package.json: "webpack-dev-server --progress --color --config webpack.dev-server.js"
 Add index.tpl.html
 Add folder structure
-Add 
+Add Added material-ui template of a simple chart
+Refactored the template so only local state is used for rendering
