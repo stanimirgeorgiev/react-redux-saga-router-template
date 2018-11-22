@@ -26,6 +26,12 @@ For components we are using Material UI lib:
 https://material-ui.com - current project is not focused on the Material-UI.
 
 ---
+#### Linting is not implemented. 
+
+---
+#### Routing is not implemented. 
+
+---
 #### Build process is not implemented. 
 
 ---
