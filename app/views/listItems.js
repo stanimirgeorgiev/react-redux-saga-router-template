@@ -15,7 +15,7 @@ export const mainListItems = (classes, that) => {
   return userData.map((item, index) => {
     return (
       <div key={index} onClick={onUserClick(that, item)}>
-        <ListItem button disableGutters divider selected={that.state.selectedUserId === item.id}>
+        <ListItem button selected={that.state.selectedUserId === item.id}>
           <ListItemIcon>
             <Avatar className={classes.avatar}>{item.name[0].toUpperCase()}</Avatar>
           </ListItemIcon>

@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Simple Test App',
-      template: '../  index.tpl.html',
+      template: '../index.tpl.html',
     })
   ],
   output: {

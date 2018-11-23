@@ -31,7 +31,7 @@ export const styles = theme => ({
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 36,
+    marginRight: 24,
   },
   menuButtonHidden: {
     display: 'none',
@@ -74,5 +74,9 @@ export const styles = theme => ({
   },
   h5: {
     marginBottom: theme.spacing.unit * 2,
+  },
+  button: {
+    margin: theme.spacing.unit,
+    zIndex: theme.zIndex.drawer + 2,
   },
 });

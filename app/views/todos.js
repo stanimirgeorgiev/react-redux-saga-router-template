@@ -9,8 +9,11 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import Refresh from '@material-ui/icons/Refresh';
+
 import { mainListItems, secondaryListItems } from './listItems';
 import SimpleBarChart from './simple-bar-chart';
 import SimpleTable from './simple-table';
@@ -27,7 +30,7 @@ class Dashboard extends React.Component {
   };
 
   handleDrawerClose = () => {
-    this.setState({ open: false, selectedUserId: null });
+    this.setState({ open: false });
   };
 
   render() {
@@ -60,6 +63,11 @@ class Dashboard extends React.Component {
             >
               Dashboard
             </Typography>
+            <IconButton color="inherit" className={classes.button} aria-label="Refresh" onClick={() => window.location.href = 'http://localhost:3000'}>
+              <Badge badgeContent={0} color="default" invisible>
+                <Refresh />
+              </Badge>
+            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -86,10 +94,10 @@ class Dashboard extends React.Component {
             <SimpleBarChart selectedUserId={this.state.selectedUserId}/>
           </Typography>
           <Typography variant="h4" gutterBottom component="h2">
-            Users
+            {this.state.selectedUserId ? 'Tasks' : 'Users'}
           </Typography>
           <div className={classes.tableContainer}>
-            <SimpleTable selectedUserId={this.state.selectedUserId}/>
+            <SimpleTable selectedUserId={this.state.selectedUserId} open={this.state.open}/>
           </div>
         </main>
       </div>

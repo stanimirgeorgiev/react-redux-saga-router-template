@@ -35,9 +35,9 @@ function SimpleBarChart(props) {
 
   return (
     // 99% per https://github.com/recharts/recharts/issues/172
-    <ResponsiveContainer width="99%" height={420}>
+    <ResponsiveContainer width="99%" height={370}>
       <BarChart data={getCompletedData}>
-        <XAxis name="Users" height={150} textAnchor={'end'} angle={-30} dataKey="Name" reversed allowDataOverflow/>
+        <XAxis name="Users" height={70} textAnchor={'end'} angle={-20} dataKey="Name" reversed allowDataOverflow/>
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />

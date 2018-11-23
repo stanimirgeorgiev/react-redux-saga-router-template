@@ -4,3 +4,7 @@
   text-overflow: ellipsis;
   max-width: 300px;
 }
+
+#root > div > div > div {
+  min-width: 90px;
+}
