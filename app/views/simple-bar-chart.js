@@ -8,27 +8,29 @@ import YAxis from 'recharts/lib/cartesian/YAxis';
 import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
 import Tooltip from 'recharts/lib/component/Tooltip';
 import Legend from 'recharts/lib/component/Legend';
-import { getTodosData, getUserData } from '../utils/mocked-data';
+//import { getTodosData, getUserData } from '../utils/mocked-data';
 
-const users = getUserData().map((user) => {
-  return {id: user.id, name: user.name};
-})
 
 function SimpleBarChart(props) {
+  const { selectedUserId, that } = props;
+
+  const users = that.state.userData.map((user) => {
+    return {id: user.id, name: user.name};
+  })
+
   let getCompletedData = users.map((user) => {
     return {
       Name: user.name,
-      Completed: getTodosData().filter((todo) => {
+      Completed: that.state.todos.filter((todo) => {
         return todo.userId === user.id && todo.completed;
       }).length,
-      Failed: getTodosData().filter((todo) => {
+      Failed: that.state.todos.filter((todo) => {
         return todo.userId === user.id && !todo.completed;
       }).length,
       id: user.id
     };
   });
 
-  const { selectedUserId } = props;
   if (selectedUserId) {
     getCompletedData = [getCompletedData[selectedUserId - 1]];
   }

@@ -9,20 +9,24 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Refresh from '@material-ui/icons/Refresh';
+import SupervisorAccount from '@material-ui/icons/SupervisorAccount';
 
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, failedTasks } from './listItems';
 import SimpleBarChart from './simple-bar-chart';
 import SimpleTable from './simple-table';
 import { styles } from './todos-styles';
+import {todos, userData} from '../utils/mocked-data';
+
 
 class Dashboard extends React.Component {
   state = {
     open: true,
-    selectedUserId: null
+    selectedUserId: null,
+    todos,
+    userData
   };
 
   handleDrawerOpen = () => {
@@ -33,9 +37,17 @@ class Dashboard extends React.Component {
     this.setState({ open: false });
   };
 
+  completeTask = (id) => {
+    const indexOfTask = this.state.todos.findIndex((task) => task.id === id);
+    this.state.todos[indexOfTask].completed = !this.state.todos[indexOfTask].completed;
+    this.setState({
+      todos: this.state.todos
+    })
+  }
+
   render() {
     const { classes } = this.props;
-
+    const remapedFailedTasks = failedTasks(classes, this);
     return (
       <div className={classes.root}>
         <AppBar
@@ -64,9 +76,10 @@ class Dashboard extends React.Component {
               Dashboard
             </Typography>
             <IconButton color="inherit" className={classes.button} aria-label="Refresh" onClick={() => window.location.href = 'http://localhost:3000'}>
-              <Badge badgeContent={0} color="default" invisible>
-                <Refresh />
-              </Badge>
+              <Refresh />
+            </IconButton>
+            <IconButton color="inherit" className={classes.button} aria-label="Refresh" onClick={() => this.setState({selectedUserId: null, userData})}>
+              <SupervisorAccount />
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -85,21 +98,38 @@ class Dashboard extends React.Component {
           <Divider />
           <List>{mainListItems(classes, this)}</List>
         </Drawer>
+
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <Typography variant="h4" gutterBottom component="h2">
             Statistics
           </Typography>
           <Typography component="div" className={classes.chartContainer}>
-            <SimpleBarChart selectedUserId={this.state.selectedUserId}/>
+            <SimpleBarChart selectedUserId={this.state.selectedUserId} that={this} />
           </Typography>
           <Typography variant="h4" gutterBottom component="h2">
             {this.state.selectedUserId ? 'Tasks' : 'Users'}
           </Typography>
           <div className={classes.tableContainer}>
-            <SimpleTable selectedUserId={this.state.selectedUserId} open={this.state.open}/>
+            <SimpleTable selectedUserId={this.state.selectedUserId} open={this.state.open} state={this.state}/>
           </div>
         </main>
+        {remapedFailedTasks.length > 0
+          ? (
+          <Drawer
+            anchor="right"
+            variant="permanent"
+            classes={{
+              paper: classNames(classes.drawerPaper, remapedFailedTasks.length === 0 && classes.drawerPaperClose),
+            }}
+            open={true}
+            className={'rightDrawer'}
+          >
+            <Divider />
+            <List>{remapedFailedTasks}</List>
+          </Drawer>)
+          : null
+          }
       </div>
     );
   }

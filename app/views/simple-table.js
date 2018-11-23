@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import TablePaginationActionsWrapped from './simple-table-pagination';
 
 import { styles } from './simple-table-styles';
-import { getUserData, todos } from '../utils/mocked-data';
+//import { userData, todos } from '../utils/mocked-data';
 
 const CustomTableCell = withStyles(theme => ({
   head: {
@@ -28,9 +28,7 @@ class SimpleTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rows: [
-        ...getUserData()
-      ],
+      rows: props.state.userData,
       page: 0,
       rowsPerPage: 5,
     }
@@ -46,6 +44,7 @@ class SimpleTable extends React.Component {
 
   pagination = () => {
     const {rows, rowsPerPage, page} = this.state;
+
     return (
       <TableFooter>
         <TableRow>
@@ -109,6 +108,9 @@ class SimpleTable extends React.Component {
         </TableHead>
         <TableBody>
           {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(user => {
+            if (!user.address) {
+              return null;
+            }
             return (
               <TableRow key={user.id}>
                 <CustomTableCell component="th" scope="row">
@@ -127,8 +129,18 @@ class SimpleTable extends React.Component {
   };
 
   componentDidUpdate(pevProps) {
-    if (this.props.selectedUserId !== pevProps.selectedUserId) {
-      const rows = todos.filter((todo) => this.props.selectedUserId === todo.userId);
+    if (this.props.selectedUserId && this.props.selectedUserId !== pevProps.selectedUserId) {
+      const rows = this.props.state.todos.filter((todo) => this.props.selectedUserId === todo.userId);
+
+      this.setState({
+        rows,
+        page: 0,
+        rowsPerPage: 5
+      });
+    }
+
+    if (!this.props.selectedUserId && this.props.selectedUserId !== pevProps.selectedUserId) {
+      const rows = this.props.state.userData;
 
       this.setState({
         rows,
@@ -142,7 +154,9 @@ class SimpleTable extends React.Component {
     const {classes, selectedUserId} = this.props
     return (
       <Paper className={classes.root}>
-        {this.pagination()}
+        <Table className={classes.table}>
+          {this.pagination()}
+        </Table>
         <div className={classes.tableWrapper}>
           {selectedUserId ? this.renderTasksPerUser(classes) : this.renderTUsers(classes)}
         </div>
