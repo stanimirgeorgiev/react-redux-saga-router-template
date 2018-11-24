@@ -14,12 +14,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Refresh from '@material-ui/icons/Refresh';
 import SupervisorAccount from '@material-ui/icons/SupervisorAccount';
 
-import { mainListItems, failedTasks } from './listItems';
+import CompleteFailedTasks from './complete-failed-tasks';
+import UsersList from './users-list';
 import SimpleBarChart from './simple-bar-chart';
 import SimpleTable from './simple-table';
 import { styles } from './todos-styles';
 import {todos, userData} from '../utils/mocked-data';
-
 
 class Dashboard extends React.Component {
   state = {
@@ -45,9 +45,15 @@ class Dashboard extends React.Component {
     })
   }
 
+  onUserClick = (item) => {
+    this.setState(() => {
+      return {selectedUserId: item.id}
+    });
+  };
+
   render() {
     const { classes } = this.props;
-    const remapedFailedTasks = failedTasks(classes, this);
+
     return (
       <div className={classes.root}>
         <AppBar
@@ -96,13 +102,19 @@ class Dashboard extends React.Component {
             </IconButton>
           </div>
           <Divider />
-          <List>{mainListItems(classes, this)}</List>
+          <List>
+            <UsersList
+              onUserClick={this.onUserClick}
+              selectedUserId={this.state.selectedUserId}
+              userData={this.state.userData}
+              classes={classes}
+            />
+          </List>
         </Drawer>
-
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <Typography variant="h4" gutterBottom component="h2">
-            Statistics
+            {this.state.selectedUserId ? 'Statistics' : 'Personal tasks results'}
           </Typography>
           <Typography component="div" className={classes.chartContainer}>
             <SimpleBarChart selectedUserId={this.state.selectedUserId} that={this} />
@@ -114,22 +126,12 @@ class Dashboard extends React.Component {
             <SimpleTable selectedUserId={this.state.selectedUserId} open={this.state.open} state={this.state}/>
           </div>
         </main>
-        {remapedFailedTasks.length > 0
-          ? (
-          <Drawer
-            anchor="right"
-            variant="permanent"
-            classes={{
-              paper: classNames(classes.drawerPaper, remapedFailedTasks.length === 0 && classes.drawerPaperClose),
-            }}
-            open={true}
-            className={'rightDrawer'}
-          >
-            <Divider />
-            <List>{remapedFailedTasks}</List>
-          </Drawer>)
-          : null
-          }
+        <CompleteFailedTasks
+          todos={this.state.todos}
+          selectedUserId={this.state.selectedUserId}
+          completeTask={this.completeTask}
+          classes={classes}
+        />
       </div>
     );
   }

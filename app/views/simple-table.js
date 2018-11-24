@@ -12,7 +12,6 @@ import Paper from '@material-ui/core/Paper';
 import TablePaginationActionsWrapped from './simple-table-pagination';
 
 import { styles } from './simple-table-styles';
-//import { userData, todos } from '../utils/mocked-data';
 
 const CustomTableCell = withStyles(theme => ({
   head: {

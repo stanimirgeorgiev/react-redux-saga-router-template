@@ -15,4 +15,9 @@ Add start to package.json: "webpack-dev-server --progress --color --config webpa
 Add index.tpl.html
 Add folder structure
 Add Added material-ui template of a simple chart
+Changed the template to be a user's tasks overview view
 Refactored the template so only local state is used for rendering
+Refactored the template to use callbacks and controller view
+Use redux for global app state.
+Plan the state
+Create the reducer
