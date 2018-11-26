@@ -1,11 +1,11 @@
-#root > div > div > div > ul > div > div > div > span {
+#root > div > div > div > div > ul > div > div > div > span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 300px;
 }
 
-#root > div > div > div {
+#root > div > div > div > div {
   min-width: 90px;
 }
 

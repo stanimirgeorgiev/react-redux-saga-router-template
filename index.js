@@ -11,7 +11,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import rootSagas from './app/sagas/root-saga';
 import { app } from './app/reducers/app';
 
-import Todos from './app/views/todos';
+import UsersTasks from './app/views/users-tasks';
 import './css/styles.css';
 
 const reducers = app;
@@ -34,7 +34,7 @@ const reactComponent = (
   <Provider store={store}>
     <React.Fragment>
       <CssBaseline />
-      <Todos />
+      <UsersTasks />
     </React.Fragment>
   </Provider>
 );

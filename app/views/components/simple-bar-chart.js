@@ -9,21 +9,20 @@ import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
 import Tooltip from 'recharts/lib/component/Tooltip';
 import Legend from 'recharts/lib/component/Legend';
 
+const SimpleBarChart = (props) => {
+  const { selectedUserId, userData, todos } = props;
 
-function SimpleBarChart(props) {
-  const { selectedUserId, that } = props;
-
-  const users = that.state.userData.map((user) => {
+  const users = userData.map((user) => {
     return {id: user.id, name: user.name};
   })
 
   let getCompletedData = users.map((user) => {
     return {
       Name: user.name,
-      Completed: that.state.todos.filter((todo) => {
+      Completed: todos.filter((todo) => {
         return todo.userId === user.id && todo.completed;
       }).length,
-      Failed: that.state.todos.filter((todo) => {
+      Failed: todos.filter((todo) => {
         return todo.userId === user.id && !todo.completed;
       }).length,
       id: user.id

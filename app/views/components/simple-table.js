@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableFooter from '@material-ui/core/TableFooter';
 import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
+
 import TablePaginationActionsWrapped from './simple-table-pagination';
 
 import { styles } from './simple-table-styles';
@@ -27,7 +29,7 @@ class SimpleTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rows: props.state.userData,
+      rows: props.userData,
       page: 0,
       rowsPerPage: 5,
     }
@@ -128,8 +130,10 @@ class SimpleTable extends React.Component {
   };
 
   componentDidUpdate(pevProps) {
-    if (this.props.selectedUserId && this.props.selectedUserId !== pevProps.selectedUserId) {
-      const rows = this.props.state.todos.filter((todo) => this.props.selectedUserId === todo.userId);
+    const {selectedUserId, userData, todos} = this.props;
+
+    if (selectedUserId && selectedUserId !== pevProps.selectedUserId) {
+      const rows = todos.filter((todo) => selectedUserId === todo.userId);
 
       this.setState({
         rows,
@@ -138,8 +142,8 @@ class SimpleTable extends React.Component {
       });
     }
 
-    if (!this.props.selectedUserId && this.props.selectedUserId !== pevProps.selectedUserId) {
-      const rows = this.props.state.userData;
+    if (!selectedUserId && selectedUserId !== pevProps.selectedUserId) {
+      const rows = userData;
 
       this.setState({
         rows,
@@ -166,8 +170,7 @@ class SimpleTable extends React.Component {
 
 SimpleTable.propTypes = {
   classes: PropTypes.object.isRequired,
-  open: PropTypes.bool.isRequired,
-  selectedUserId: PropTypes.number,
+  selectedUserId: PropTypes.number
 };
 
 export default withStyles(styles)(SimpleTable);
