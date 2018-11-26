@@ -22,11 +22,15 @@ Creating webpack configuration.
  
 Creating the simple app structure and files. 
 ---
+
+Creating react view
  - Add folder structure
  - Add Added material-ui template of a simple chart
  - Changed the template to be a user's tasks overview view
  - Refactored the template so only local state is used for rendering
  - Refactored the template to use callbacks and controller view
+ 
+Using redux state, actions and reducers
  - Use redux for global app state.
  - Plan the state
  - Create the reducer
