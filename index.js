@@ -9,7 +9,11 @@ import { App } from "./app/app";
 import rootSagas from "./app/sagas/root-saga";
 import { app } from "./app/reducers/app";
 
-import "./css/styles.css";
+import rootSagas from './app/sagas/root-saga';
+import { app } from './app/reducers/app';
+
+import UsersTasks from './app/views/users-tasks';
+import './css/styles.css';
 
 const reducers = app;
 const sagaMiddleware = createSagaMiddleware(rootSagas);
@@ -24,7 +28,14 @@ const createRootSaga = function* (sagas) {
 
 const appDomId = "root";
 const rootContainer = document.getElementById(appDomId);
-const reactComponent = <App />;
+const reactComponent = (
+  <Provider store={store}>
+    <React.Fragment>
+      <CssBaseline />
+      <UsersTasks />
+    </React.Fragment>
+  </Provider>
+);
 
 sagaMiddleware.run(createRootSaga, rootSagas);
 
