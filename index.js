@@ -10,12 +10,12 @@ import rootSagas from "./app/sagas/root-saga";
 import { app } from "./app/reducers/app";
 
 import rootSagas from './app/sagas/root-saga';
-import { app } from './app/reducers/app';
+import appReducer from './app/reducers/app';
 
-import UsersTasks from './app/views/users-tasks';
+import UsersTasks from './app/views/users-tasks-container';
 import './css/styles.css';
 
-const reducers = app;
+const reducers = appReducer;
 const sagaMiddleware = createSagaMiddleware(rootSagas);
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
 

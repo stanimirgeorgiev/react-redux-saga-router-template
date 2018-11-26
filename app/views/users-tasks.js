@@ -10,14 +10,12 @@ import CompleteFailedTasks from './components/complete-failed-tasks';
 
 import { styles } from './user-tasks-styles';
 
-import {todos, userData} from '../utils/mocked-data';
-
 class UsersTasks extends React.Component {
   state = {
     open: true,
     selectedUserId: null,
-    todos,
-    userData
+    todos: this.props.todos,
+    userData: this.props.userData
   };
 
   handleDrawerOpen = () => {
@@ -42,7 +40,7 @@ class UsersTasks extends React.Component {
     });
   };
 
-  changeUserIdAndData = (selectedUserId, userData = userData) => () => this.setState({selectedUserId, userData})
+  changeUserIdAndData = (selectedUserId, userData = this.props.userData) => () => this.setState({selectedUserId, userData})
 
   render() {
     const { classes } = this.props;

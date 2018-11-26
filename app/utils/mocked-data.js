@@ -1,4 +1,3 @@
-
 export const userData = [
   {
     "id": 1,
@@ -231,7 +230,6 @@ export const userData = [
     }
   }
 ];
-
 
 export const todos = [
   {
@@ -1435,7 +1433,3 @@ export const todos = [
     "completed": false
   }
 ];
-
-
-export const getUserData = (classes) => userData;
-export const getTodosData = (classes) => todos;
