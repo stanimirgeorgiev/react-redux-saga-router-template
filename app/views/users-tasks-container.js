@@ -1,6 +1,12 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {openUserSection, closeUserSection, clickOnUser, updateSelectedUserAndData} from '../actions/user-tasks-actions';
+import {
+  openUserSection,
+  closeUserSection,
+  clickOnUser,
+  updateSelectedUserAndData,
+  fetchUsers,
+} from '../actions/user-tasks-actions';
 import {completeUserTask} from '../actions/tasks-actions';
 
 import UsersTasks from './users-tasks';
@@ -21,6 +27,7 @@ export const mapDispatchToProps = (dispatch) => {
     completeUserTask,
     clickOnUser,
     updateSelectedUserAndData,
+    fetchUsers,
   }, dispatch);
 };
 

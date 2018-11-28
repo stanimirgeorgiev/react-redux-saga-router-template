@@ -22,6 +22,10 @@ class UsersTasks extends React.Component {
 
   changeUserIdAndData = (selectedUserId, userData = this.props.userData) => () => this.props.updateSelectedUserAndData(selectedUserId, userData)
 
+  componentDidMount() {
+    this.props.fetchUsers();
+  }
+
   render() {
     const { classes } = this.props;
 

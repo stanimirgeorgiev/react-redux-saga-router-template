@@ -1,4 +1,4 @@
-import {fetchData} from './hello-saga';
+import {fetchData} from './fetch-users-saga';
 
 export default [
   fetchData

@@ -1,4 +1,4 @@
-import {ActionTypes} from '../constants/action-tipes';
+import {ActionTypes} from '../constants/action-types';
 
 const openUserSection = () => {
   return {
@@ -28,9 +28,25 @@ const updateSelectedUserAndData = (selectedUserId, userData) => {
   }
 };
 
+const fetchUsers = () => {
+  return {
+    type: ActionTypes.FETCH_USERS_SAGA,
+    payload: {}
+  }
+};
+
+const usersReceived = (userData) => {
+  return {
+    type: ActionTypes.USERS_RECEIVED,
+    payload: {userData}
+  }
+};
+
 export {
   openUserSection,
   closeUserSection,
   clickOnUser,
   updateSelectedUserAndData,
+  fetchUsers,
+  usersReceived,
 }

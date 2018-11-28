@@ -1,6 +1,6 @@
 import {todos} from '../utils/mocked-data';
 import cloneDeep from 'lodash/cloneDeep';
-import {ActionTypes} from '../constants/action-tipes';
+import {ActionTypes} from '../constants/action-types';
 
 const initialTasksState = {
   tasksData: todos

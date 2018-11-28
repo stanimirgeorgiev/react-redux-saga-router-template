@@ -1,8 +1,9 @@
-import {userData} from '../utils/mocked-data';
-import {ActionTypes} from '../constants/action-tipes';
+//import {userData} from '../utils/mocked-data';
+import {ActionTypes} from '../constants/action-types';
 
 const initialUsersState = {
-  userData,
+  userData: [],
+  //userData,
   isOpened: true,
   selectedUserId: null,
 };
@@ -20,6 +21,9 @@ const users = (state = initialUsersState, action) => {
       return {...state, selectedUserId: payload.selectedUserId};
     }
     case ActionTypes.UPDATE_USER_AND_DATA: {
+      return {...state, ...payload};
+    }
+    case ActionTypes.USERS_RECEIVED: {
       return {...state, ...payload};
     }
   }

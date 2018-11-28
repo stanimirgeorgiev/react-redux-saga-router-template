@@ -1,4 +1,4 @@
-import {ActionTypes} from '../constants/action-tipes';
+import {ActionTypes} from '../constants/action-types';
 
 const completeUserTask = (indexOfTask) => {
   return {
