@@ -12,18 +12,20 @@ import { styles } from './user-tasks-styles';
 
 class UsersTasks extends React.Component {
   state = {
-    open: true,
+    //open: true,
     selectedUserId: null,
     todos: this.props.todos,
     userData: this.props.userData
   };
 
   handleDrawerOpen = () => {
-    this.setState({ open: true });
+    //this.setState({ open: true });
+    this.props.openUserSection();
   };
 
   handleDrawerClose = () => {
-    this.setState({ open: false });
+    //this.setState({ open: false });
+    this.props.closeUserSection();
   };
 
   completeTask = (id) => {
@@ -51,14 +53,14 @@ class UsersTasks extends React.Component {
           handleDrawerOpen={this.handleDrawerOpen}
           classes={classes}
           changeUserIdAndData={this.changeUserIdAndData}
-          isOpened={this.state.open}
+          isOpened={this.props.isOpened}
           userData={this.state.userData}
         />
         <UsersSection
           handleDrawerClose={this.handleDrawerClose}
           classes={classes}
           onUserClick={this.onUserClick}
-          isOpened={this.state.open}
+          isOpened={this.props.isOpened}
           selectedUserId={this.state.selectedUserId}
           userData={this.state.userData}
         />

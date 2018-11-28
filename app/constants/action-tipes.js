@@ -1,0 +1,4 @@
+export const ActionTypes ={
+  OPEN_USER_SECTION: 'OPEN_USER_SECTION',
+  CLOSE_USER_SECTION: 'CLOSE_USER_SECTION'
+};
