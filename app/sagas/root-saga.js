@@ -1,5 +1,7 @@
-import {fetchData} from './fetch-users-saga';
+import {fetchUsersData} from './fetch-users-saga';
+import {fetchTodosData} from './fetch-todos-saga';
 
 export default [
-  fetchData
+  fetchUsersData,
+  fetchTodosData
 ]

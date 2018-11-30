@@ -25,7 +25,7 @@ const Dashboard = (props) => {
         {selectedUserId ? 'Tasks' : 'Users'}
       </Typography>
       <div className={classes.tableContainer}>
-        <SimpleTable selectedUserId={selectedUserId} userData={userData} todos={todos}/>
+        <SimpleTable selectedUserId={selectedUserId} userData={userData} todos={todos} taskWasCompleted={props.taskWasCompleted}/>
       </div>
     </main>
   );

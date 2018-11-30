@@ -7,6 +7,22 @@ const completeUserTask = (indexOfTask) => {
   }
 };
 
+const todosReceived = (todos) => {
+  return {
+    type: ActionTypes.TODOS_RECEIVED,
+    payload: {tasksData: todos}
+  }
+};
+
+const fetchTodos = () => {
+  return {
+    type: ActionTypes.FETCH_TODOS_SAGA,
+    payload: {}
+  }
+};
+
 export {
   completeUserTask,
+  todosReceived,
+  fetchTodos,
 }

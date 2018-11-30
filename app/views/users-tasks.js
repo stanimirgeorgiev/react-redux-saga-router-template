@@ -24,6 +24,7 @@ class UsersTasks extends React.Component {
 
   componentDidMount() {
     this.props.fetchUsers();
+    this.props.fetchTodos();
   }
 
   render() {
@@ -51,6 +52,7 @@ class UsersTasks extends React.Component {
           todos={this.props.todos}
           userData={this.props.userData}
           selectedUserId={this.props.selectedUserId}
+          taskWasCompleted={this.props.taskWasCompleted}
         />
         <CompleteFailedTasks
           todos={this.props.todos}

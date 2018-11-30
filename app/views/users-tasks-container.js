@@ -7,7 +7,7 @@ import {
   updateSelectedUserAndData,
   fetchUsers,
 } from '../actions/user-tasks-actions';
-import {completeUserTask} from '../actions/tasks-actions';
+import {completeUserTask, fetchTodos} from '../actions/tasks-actions';
 
 import UsersTasks from './users-tasks';
 
@@ -15,6 +15,7 @@ export const mapStateToProps = (state) => {
   return {
     userData: state.users.userData,
     todos: state.tasks.tasksData,
+    taskWasCompleted: state.tasks.taskWasCompleted,
     isOpened: state.users.isOpened,
     selectedUserId: state.users.selectedUserId,
   };
@@ -28,6 +29,7 @@ export const mapDispatchToProps = (dispatch) => {
     clickOnUser,
     updateSelectedUserAndData,
     fetchUsers,
+    fetchTodos,
   }, dispatch);
 };
 
