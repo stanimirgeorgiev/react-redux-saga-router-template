@@ -13,7 +13,7 @@ import { styles } from './user-tasks-styles';
 class UsersTasks extends React.Component {
   completeTask = (id) => {
     const indexOfTask = this.props.todos.findIndex((task) => task.id === id);
-    this.props.completeUserTask(indexOfTask)
+    this.props.completeUserTask(indexOfTask);
   }
 
   onUserClick = (item) => {

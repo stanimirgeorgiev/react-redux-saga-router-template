@@ -4,7 +4,7 @@ const completeUserTask = (indexOfTask) => {
   return {
     type: ActionTypes.COMPLETE_USER_TASK,
     payload: {indexOfTask}
-  }
+  };
 };
 
 const todosReceived = (todos) => {
@@ -23,6 +23,4 @@ const fetchTodos = () => {
 
 export {
   completeUserTask,
-  todosReceived,
-  fetchTodos,
-}
+};

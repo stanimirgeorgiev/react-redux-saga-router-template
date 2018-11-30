@@ -19,17 +19,17 @@ const Dashboard = (props) => {
         {selectedUserId ? 'Statistics' : 'Personal tasks results'}
       </Typography>
       <Typography component="div" className={classes.chartContainer}>
-        <SimpleBarChart selectedUserId={selectedUserId} userData={userData} todos={todos}/>
+        <SimpleBarChart selectedUserId={selectedUserId} userData={userData} todos={todos} />
       </Typography>
       <Typography variant="h4" gutterBottom component="h2">
         {selectedUserId ? 'Tasks' : 'Users'}
       </Typography>
       <div className={classes.tableContainer}>
-        <SimpleTable selectedUserId={selectedUserId} userData={userData} todos={todos} taskWasCompleted={props.taskWasCompleted}/>
+        <SimpleTable selectedUserId={selectedUserId} userData={userData} todos={todos} />
       </div>
     </main>
   );
-}
+};
 
 Dashboard.propTypes = {
   classes: PropTypes.object.isRequired,

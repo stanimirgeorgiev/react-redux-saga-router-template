@@ -1,11 +1,10 @@
-"use-strict";
-import React from "react";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import { applyMiddleware, createStore, compose } from "redux";
-import createSagaMiddleware from "redux-saga";
-import { fork } from "redux-saga/effects";
-import { App } from "./app/app";
+'use-strict';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { fork } from 'redux-saga/effects';
 
 import rootSagas from "./app/sagas/root-saga";
 

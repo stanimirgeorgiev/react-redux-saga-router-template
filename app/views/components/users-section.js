@@ -41,7 +41,7 @@ const UsersSection = (props) => {
       </Drawer>
     </div>
   );
-}
+};
 
 UsersSection.propTypes = {
   classes: PropTypes.object.isRequired,

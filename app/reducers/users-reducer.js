@@ -29,6 +29,6 @@ const users = (state = initialUsersState, action) => {
   }
 
   return state;
-}
+};
 
 export default users;
