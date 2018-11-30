@@ -25,8 +25,17 @@ https://jsonplaceholder.typicode.com
 For components we are using Material UI lib:
 https://material-ui.com - current project is not focused on the Material-UI.
 
----
-#### Linting is not implemented. 
+Branches to the master:
+
+ - development - this is a branch where every other branch is merged before merging to default.
+ - eslint - implementation of the linting for the js files.
+ - master - default branch where only fully completed functionality (releases) could be merged.
+ - simple_react_view - simple react view without any implementation of redux, redux-saga and etc.
+ - simple_redux - simple redux implementation developed on top of simple_react_view branch. Used controller view.
+ - simple_redux_saga - simple redux-saga implementation on top of simple_redux branch. Used axios as fetching api and REST services of https://jsonplaceholder.typicode.com.
+ 
+#### Linting is implemented using eslint package.
+ For further configuration see eslint branch.
 
 ---
 #### Routing is not implemented. 
