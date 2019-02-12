@@ -40,7 +40,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^4.0.0-beta.3",
+    "html-webpack-plugin": "^4.0.0-beta.5",
     "json-loader": "^0.5.7",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
@@ -57,17 +57,10 @@
     "webpack-merge": "^4.1.4"
   },
   "devDependencies": {
-    "prop-types": "latest",
-    "json-loader": "latest",
-    "html-webpack-plugin": "latest",
-    "file-loader": "latest",
-    "url-loader": "latest",
-    "webpack-merge": "latest",
-    "webpack": "latest",
-    "clean-webpack-plugin": "latest",
-    "css-loader": "latest",
-    "style-loader": "latest",
-    "webpack-cli": "latest",
-    "webpack-dev-server": "latest"
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }
