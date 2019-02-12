@@ -1,6 +1,8 @@
 # Simple app for Teaching: React, Redux and Redux-Saga building simple app.
 This is a simple test app which will implement some of the features included in React, Redux, Redux-Saga in one simple app.
 
+Repository: git@stanimirgeorgiev/Teach__React__Redux__Saga
+
 The documentation for the react:
 https://reactjs.org/docs/hello-world.html
 
