@@ -1,5 +1,4 @@
 //import {todos} from '../utils/mocked-data';
-import cloneDeep from 'lodash/cloneDeep';
 import { ActionTypes } from '../constants/action-types';
 
 const initialTasksState = {
@@ -12,7 +11,7 @@ const tasks = (state = initialTasksState, action) => {
 
     switch (type) {
         case ActionTypes.COMPLETE_USER_TASK: {
-            const modifiedState = cloneDeep(state.tasksData);
+            const modifiedState = { ...state.tasksData };
             modifiedState[payload.indexOfTask].completed = !modifiedState[payload.indexOfTask].completed;
             return {
                 ...state,
@@ -20,7 +19,7 @@ const tasks = (state = initialTasksState, action) => {
                 taskWasCompleted: { ...state.tasksData[payload.indexOfTask] },
             };
         }
-        case ActionTypes.TODOS_RECEIVED: {
+        case ActionTypes.TASKS_RECEIVED: {
             return { ...state, ...payload };
         }
     }
