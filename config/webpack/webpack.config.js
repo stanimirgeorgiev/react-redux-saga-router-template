@@ -1,22 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const ROOT = __dirname;
+const { rootDir } = require('./webpack.const');
 
 module.exports = {
-    context: ROOT,
+    context: rootDir,
     entry: {
-        app: ['babel-polyfill', '../index.js'],
+        app: ['babel-polyfill', 'index.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Simple Test App',
-            template: '../index.tpl.html',
+            template: 'index.tpl.html',
         }),
     ],
     output: {
         filename: '[name].bundle.[chunkhash].js',
-        path: path.resolve(ROOT, '../webapp'),
+        path: path.resolve(rootDir, 'build'),
         publicPath: '/',
         sourceMapFilename: '[name].bundle.[chunkhash].map',
     },
@@ -36,8 +35,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
-                include: [path.resolve(ROOT, '../')],
-                exclude: [path.resolve(ROOT, '../node_modules')],
+                include: [path.resolve(rootDir)],
+                exclude: [path.resolve(rootDir, 'node_modules')],
             },
             {
                 test: /\.svg$/,
@@ -66,8 +65,8 @@ module.exports = {
     resolve: {
         modules: [
             '.',
-            // path.resolve(ROOT, '../test', 'js'),
-            path.resolve(ROOT, '../node_modules'),
+            // path.resolve(rootDir, '../test', 'js'),
+            path.resolve(rootDir, 'node_modules'),
         ],
     },
     mode: 'development',

@@ -1,18 +1,6 @@
 const { merge } = require('webpack-merge');
-const path = require('path');
-//const CleanWebpackPlugin = require('clean-webpack-plugin');
-
 const config = require('./webpack.config.js');
 
-//const cleanAfterBuild = {
-//  plugins: [
-//    new CleanWebpackPlugin([
-//      'dist'
-//    ])
-//  ]
-//};
-
-//const ROOT = __dirname;
 const REMOTE_API = 'https://jsonplaceholder.typicode.com/';
 
 module.exports = merge(config, {

@@ -1,7 +1,7 @@
 import createSagaMiddleware from 'redux-saga';
 import { fork } from 'redux-saga/effects';
 
-import rootSagas from './src/sagas/root-saga';
+import rootSagas from '../sagas/root-saga';
 
 export const sagaMiddleware = createSagaMiddleware(rootSagas);
 
