@@ -5,10 +5,10 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { fork } from 'redux-saga/effects';
-import { App } from './app/app';
+import { App } from './src/app';
 
-import rootSagas from './app/sagas/root-saga';
-import appReducer from './app/reducers/app';
+import rootSagas from './src/sagas/root-saga';
+import appReducer from './src/reducers/app';
 
 import './css/styles.css';
 

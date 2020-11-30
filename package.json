@@ -4,7 +4,7 @@
     "description": "Test React-Redux-Redux-Saga App",
     "main": "index.js",
     "scripts": {
-        "start": "webpack serve --progress --color --config ./config/webpack.dev-server.js",
+        "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
         "lint": "npm run lint-js",
         "lint-js": "eslint --ext .js .*.js *.js app",
         "fix": "eslint --ext .js .*.js *.js app --fix",
