@@ -1,21 +1,21 @@
 #root > div > div > div > div > ul > div > div > div > span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 #root > div > div > div > div {
-  min-width: 90px;
+    min-width: 90px;
 }
 
 #root > div > div:nth-child(4) > div > ul > li > div > span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 .rightDrawer > div {
-  top: 60px;
+    top: 60px;
 }
