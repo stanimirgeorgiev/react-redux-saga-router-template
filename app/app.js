@@ -1,5 +1,9 @@
-import React from "react";
+import React from 'react';
 
 export const App = () => {
-  return "mama";
+    return (
+        <div style={{ margin: '0 auto', top: '50px' }}>
+            <h3>Mama</h3>
+        </div>
+    );
 };
