@@ -2,9 +2,12 @@ import { TasksList } from './views/tasks-list';
 import { fetchTasksData } from './sagas/fetch-tasks-saga';
 
 import tasks from './reducers/tasks-reducer';
+import { tasksActions } from './actions/tasks-actions';
 
-export const Tasks = {
+export default {
     component: TasksList,
-    saga: [fetchTasksData],
+    sagas: [fetchTasksData],
     reducer: tasks,
+    actions: tasksActions,
+    //route: tasksRoute
 };

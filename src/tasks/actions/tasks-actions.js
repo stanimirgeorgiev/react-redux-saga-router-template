@@ -20,3 +20,9 @@ export const fetchTasks = () => {
         payload: {},
     };
 };
+
+export const tasksActions = {
+    completeUserTask,
+    tasksReceived,
+    fetchTasks,
+};
