@@ -1,8 +1,8 @@
-const merge = require('webpack-merge');
-const path = require('path');
+const { merge } = require("webpack-merge");
+const path = require("path");
 //const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const config = require('./webpack.config.js');
+const config = require("./webpack.config.js");
 
 //const cleanAfterBuild = {
 //  plugins: [
@@ -13,23 +13,23 @@ const config = require('./webpack.config.js');
 //};
 
 //const ROOT = __dirname;
-const REMOTE_API = 'https://jsonplaceholder.typicode.com/';
+const REMOTE_API = "https://jsonplaceholder.typicode.com/";
 
 module.exports = merge(config, {
-  devtool: 'eval-source-map',
+  devtool: "eval-source-map",
   output: {
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].bundle.map'
+    filename: "[name].bundle.js",
+    sourceMapFilename: "[name].bundle.map",
   },
   devServer: {
-    contentBase: ['/'],
+    contentBase: ["/"],
     port: 3000,
     proxy: {
-      '/api/': {
+      "/api/": {
         target: REMOTE_API,
-        secure: false
-      }
-    }
+        secure: false,
+      },
+    },
   },
   parallelism: 7,
   cache: true,
