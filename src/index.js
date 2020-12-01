@@ -1,12 +1,12 @@
 'use-strict';
 import React from 'react';
 import { render } from 'react-dom';
-import { App } from './src/app';
+import { App } from './app/app';
 
-import { startSagaMiddleware } from './src/config/root-sagas';
-import { RootProvider } from './src/config/root-store';
+import { startSagaMiddleware } from './config/root-sagas';
+import { RootProvider } from './config/root-store';
 
-import './css/styles.css';
+import './index.css';
 
 const appDomId = 'root';
 const rootContainer = document.getElementById(appDomId);

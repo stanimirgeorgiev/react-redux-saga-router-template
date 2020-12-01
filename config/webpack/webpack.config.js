@@ -5,12 +5,12 @@ const { rootDir } = require('./webpack.const');
 module.exports = {
     context: rootDir,
     entry: {
-        app: ['babel-polyfill', 'index.js'],
+        app: ['babel-polyfill', 'src/index.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Simple Test App',
-            template: 'index.tpl.html',
+            template: 'src/index.tpl.html',
         }),
     ],
     output: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { rootPaths } from '../../config/app-factory';
 import './header.css';
 
 export const Header = () => {
@@ -9,10 +10,10 @@ export const Header = () => {
             <div className="header">
                 <div className="header-container">
                     <ul className="header-item-wrapper">
-                        <li className="header-item" onClick={() => history.push('/')}>
+                        <li className="header-item" onClick={() => history.push(rootPaths.tasks)}>
                             Tasks
                         </li>
-                        <li className="header-item" onClick={() => history.push('/about')}>
+                        <li className="header-item" onClick={() => history.push(rootPaths.about)}>
                             About
                         </li>
                     </ul>
