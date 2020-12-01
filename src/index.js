@@ -11,9 +11,9 @@ import './index.css';
 const appDomId = 'root';
 const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
-    <RootProvider>
-        <App />
-    </RootProvider>
+  <RootProvider>
+    <App />
+  </RootProvider>
 );
 
 startSagaMiddleware();

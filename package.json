@@ -1,72 +1,73 @@
 {
-    "name": "react-redux-saga-route",
-    "version": "0.0.1",
-    "description": "Template for React, Redux, Redux-Saga, Router app",
-    "main": "index.js",
-    "scripts": {
-        "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
-        "lint": "npm run lint-js",
-        "lint-js": "eslint --ext .js .*.js *.js app",
-        "fix": "eslint --ext .js .*.js *.js app --fix",
-        "test": "test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App.git"
-    },
-    "keywords": [
-        "react",
-        "redux",
-        "redux-saga",
-        "react-router"
-    ],
-    "author": "stg",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App/issues"
-    },
-    "homepage": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App#readme",
-    "dependencies": {
-        "@babel/core": "latest",
-        "@babel/plugin-proposal-class-properties": "latest",
-        "@babel/preset-react": "latest",
-        "@babel/preset-stage-0": "latest",
-        "axios": "latest",
-        "babel": "latest",
-        "babel-eslint": "latest",
-        "babel-loader": "latest",
-        "babel-polyfill": "latest",
-        "babel-preset-airbnb": "latest",
-        "babel-preset-env": "latest",
-        "babel-preset-react": "latest",
-        "babel-preset-stage-0": "latest",
-        "react": "latest",
-        "react-dom": "latest",
-        "react-redux": "latest",
-        "react-redux-saga": "latest",
-        "react-router-dom": "latest",
-        "redux": "latest",
-        "redux-saga": "latest"
-    },
-    "devDependencies": {
-        "eslint": "latest",
-        "eslint-loader": "latest",
-        "eslint-plugin-jsdoc": "latest",
-        "eslint-plugin-jsx-a11y": "latest",
-        "eslint-plugin-lodash": "latest",
-        "eslint-plugin-no-only-tests": "latest",
-        "eslint-plugin-react": "latest",
-        "prop-types": "latest",
-        "json-loader": "latest",
-        "html-webpack-plugin": "latest",
-        "file-loader": "latest",
-        "url-loader": "latest",
-        "webpack-merge": "latest",
-        "webpack": "latest",
-        "clean-webpack-plugin": "latest",
-        "css-loader": "latest",
-        "style-loader": "latest",
-        "webpack-cli": "latest",
-        "webpack-dev-server": "latest"
-    }
+  "name": "react-redux-saga-route",
+  "version": "0.0.1",
+  "description": "Template for React, Redux, Redux-Saga, Router app",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
+    "lint": "npm run lint-js",
+    "lint-js": "eslint --ext .js .*.js *.js src/",
+    "fix": "eslint --ext .js .*.js *.js src/ --fix",
+    "fix:all": "eslint --ext .js .*.js *.js --fix",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "redux-saga",
+    "react-router"
+  ],
+  "author": "stg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App/issues"
+  },
+  "homepage": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App#readme",
+  "dependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
+    "@babel/preset-react": "latest",
+    "@babel/preset-stage-0": "latest",
+    "axios": "latest",
+    "babel": "latest",
+    "babel-eslint": "latest",
+    "babel-loader": "latest",
+    "babel-polyfill": "latest",
+    "babel-preset-airbnb": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "latest",
+    "react-redux-saga": "latest",
+    "react-router-dom": "latest",
+    "redux": "latest",
+    "redux-saga": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-loader": "latest",
+    "eslint-plugin-jsdoc": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-lodash": "latest",
+    "eslint-plugin-no-only-tests": "latest",
+    "eslint-plugin-react": "latest",
+    "prop-types": "latest",
+    "json-loader": "latest",
+    "html-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "url-loader": "latest",
+    "webpack-merge": "latest",
+    "webpack": "latest",
+    "clean-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "style-loader": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  }
 }

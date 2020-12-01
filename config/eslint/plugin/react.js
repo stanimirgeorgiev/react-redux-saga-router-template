@@ -1,16 +1,14 @@
 module.exports = {
-  'plugins': [
-    'react'
-  ],
-  'rules': {
+  plugins: ['react'],
+  rules: {
     'react/display-name': 'off',
     'react/forbid-component-props': 'off',
-    'react/forbid-prop-types': ['error', { 'forbid': ['any', 'array', 'object'] }],
+    'react/forbid-prop-types': ['error', { forbid: ['any', 'array', 'object'] }],
     'react/jsx-boolean-value': ['error', 'never'],
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
-    'react/jsx-curly-spacing': ['error', 'never', { 'allowMultiline': true }],
+    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
     'react/jsx-equals-spacing': ['error', 'never'],
-    'react/jsx-filename-extension': ['error', { 'extensions': [ '.js' ] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-handler-names': 'off',
     'react/jsx-indent-props': ['error', 2],
@@ -19,15 +17,18 @@ module.exports = {
     'react/jsx-max-props-per-line': 'off',
     'react/jsx-no-bind': 'off',
     'react/jsx-no-comment-textnodes': 'off',
-    'react/jsx-no-duplicate-props': ['error', {'ignoreCase': true}],
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
     'react/jsx-no-literals': 'off',
     'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
-    'react/jsx-pascal-case': ['error', { allowAllCaps: false, ignore: []}],
+    'react/jsx-pascal-case': ['error', { allowAllCaps: false, ignore: [] }],
     'react/jsx-sort-props': 'off',
-    'react/jsx-tag-spacing': ['error', {
-      'beforeSelfClosing': 'always',
-    }],
+    'react/jsx-tag-spacing': [
+      'error',
+      {
+        beforeSelfClosing: 'always',
+      },
+    ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'error',
