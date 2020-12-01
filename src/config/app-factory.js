@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import * as bundle from '../app-loader';
 
-console.log('-----------------------------', Object.keys(bundle));
 const appModuleNames = Object.keys(bundle);
 
 let appReducers = {};

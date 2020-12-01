@@ -1,49 +1,50 @@
-# Simple app for Teaching: React, Redux and Redux-Saga building simple app.
-This is a simple test app which will implement some of the features included in React, Redux, Redux-Saga in one simple app.
+## **React, redux, redux-saga and routing boilerplate**
 
-Repository: git@stanimirgeorgiev/Teach__React__Redux__Saga
+## General information
 
-The documentation for the react:
-https://reactjs.org/docs/hello-world.html
+This is a boilerplate setup which allows the user to start a quick development of an application with the following main technologies included:
 
-The documentation for the redux:
-https://redux.js.org
+-   [React](https://reactjs.org/)
+-   [Redux](https://redux.js.org/)
+-   [Redux saga middleware](https://redux-saga.js.org/)
+-   [React router](https://reactrouter.com/)
 
-The documentation for the redux-saga:
-https://redux-saga.js.org/docs/introduction
+The technologies used for the setup of the project includes:
+
+-   [Babel](https://babeljs.io/)
+-   [Eslint](https://eslint.org/)
+-   [Webpack](https://webpack.js.org/)
+
+For testing the project is setup with the following testing libs:
+
+-   [Chai](https://www.chaijs.com/)
+-   [Enzyme](https://enzymejs.github.io/enzyme/?utm_source=next.36kr.com)
+-   [Mocha](https://mochajs.org/)
+
+All of the packages has their versions set to `latest` and thus the project could be broken on major braking changes. The responsibility of updating is personal of the user and the CI build process should be used as indicator if everything is working (compiling, building and visualization). The template should have fixed versioning if it will be use for production builds.
+
+## Configuration
 
 To start the project use:
-1. npm install
-2. npm start
 
-Configuration for the webpack and webpack-dev-server is in config folder.
+`npm install`
 
-Index.js is the entry point for the app.
-Index.tpl.html is the template used by webpack to bundle and create the final index.html page.
+`npm start`
 
-For the backend services we use:
+The test should be run by using:
+
+`npm test`
+
+To build the production build use:
+
+`npm run build`
+
+## Project structure
+
+-   Configuration for the webpack, eslint, babel is in `config` folder.
+
+-   All project files are in the `src` folder. The file `index.js` is the entry point for the application and `index.tpl.html` is the template used by webpack to bundle and create the final `index.html`.
+-   The output will be compiled in the `build` folder which is not included in the repository and should be recreated on every local build.
+
+For the remote REST api services we use:
 https://jsonplaceholder.typicode.com
-
-For components we are using Material UI lib:
-https://material-ui.com - current project is not focused on the Material-UI.
-
-Branches to the master:
-
- - development - this is a branch where every other branch is merged before merging to default.
- - eslint - implementation of the linting for the js files.
- - master - default branch where only fully completed functionality (releases) could be merged.
- - simple_react_view - simple react view without any implementation of redux, redux-saga and etc.
- - simple_redux - simple redux implementation developed on top of simple_react_view branch. Used controller view.
- - simple_redux_saga - simple redux-saga implementation on top of simple_redux branch. Used axios as fetching api and REST services of https://jsonplaceholder.typicode.com.
- 
-#### Linting is implemented using eslint package.
- For further configuration see eslint branch.
-
----
-#### Routing is not implemented. 
-
----
-#### Build process is not implemented. 
-
----
-#### Test framework is not implemented.

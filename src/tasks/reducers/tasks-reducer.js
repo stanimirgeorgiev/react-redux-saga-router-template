@@ -1,4 +1,3 @@
-//import {todos} from '../utils/mocked-data';
 import { ActionTypes } from '../constants/action-types';
 
 const initialTasksState = {
@@ -6,7 +5,7 @@ const initialTasksState = {
     taskWasCompleted: {},
 };
 
-const tasks = (state = initialTasksState, action) => {
+export const tasks = (state = initialTasksState, action) => {
     const { type, payload } = action;
 
     switch (type) {
@@ -26,5 +25,3 @@ const tasks = (state = initialTasksState, action) => {
 
     return state;
 };
-
-export default tasks;

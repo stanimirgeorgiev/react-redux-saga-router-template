@@ -1,7 +1,7 @@
 {
-    "name": "softuni",
-    "version": "0.0.2",
-    "description": "Test React-Redux-Redux-Saga App",
+    "name": "react-redux-saga-route",
+    "version": "0.0.1",
+    "description": "Template for React, Redux, Redux-Saga, Router app",
     "main": "index.js",
     "scripts": {
         "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
@@ -17,9 +17,10 @@
     "keywords": [
         "react",
         "redux",
-        "redux-saga"
+        "redux-saga",
+        "react-router"
     ],
-    "author": "Stanimir Georgiev",
+    "author": "stg",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App/issues"
@@ -39,13 +40,6 @@
         "babel-preset-env": "latest",
         "babel-preset-react": "latest",
         "babel-preset-stage-0": "latest",
-        "eslint": "latest",
-        "eslint-loader": "latest",
-        "eslint-plugin-jsdoc": "latest",
-        "eslint-plugin-jsx-a11y": "latest",
-        "eslint-plugin-lodash": "latest",
-        "eslint-plugin-no-only-tests": "latest",
-        "eslint-plugin-react": "latest",
         "react": "latest",
         "react-dom": "latest",
         "react-redux": "latest",
@@ -54,6 +48,13 @@
         "redux-saga": "latest"
     },
     "devDependencies": {
+        "eslint": "latest",
+        "eslint-loader": "latest",
+        "eslint-plugin-jsdoc": "latest",
+        "eslint-plugin-jsx-a11y": "latest",
+        "eslint-plugin-lodash": "latest",
+        "eslint-plugin-no-only-tests": "latest",
+        "eslint-plugin-react": "latest",
         "prop-types": "latest",
         "json-loader": "latest",
         "html-webpack-plugin": "latest",
