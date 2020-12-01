@@ -44,6 +44,7 @@
         "react-dom": "latest",
         "react-redux": "latest",
         "react-redux-saga": "latest",
+        "react-router-dom": "latest",
         "redux": "latest",
         "redux-saga": "latest"
     },
