@@ -1,16 +1,17 @@
 module.exports = {
-  'rules': {
+  rules: {
     'accessor-pairs': 'off',
     'array-callback-return': 'off',
     'block-scoped-var': 'off',
     'class-methods-use-this': 'off',
-    'complexity': ['warn', 14],
+    // eslint-disable-next-line no-magic-numbers
+    complexity: ['warn', 14],
     'consistent-return': 'off',
-    'curly': 'error',
-    'default-case': [ 'error' ],
+    curly: 'error',
+    'default-case': ['error'],
     'dot-location': ['error', 'property'],
     'dot-notation': 'off',
-    'eqeqeq': 'error',
+    eqeqeq: 'error',
     'guard-for-in': 'off',
     'no-alert': 'error',
     'no-caller': 'error',
@@ -34,10 +35,13 @@ module.exports = {
     'no-labels': 'off',
     'no-lone-blocks': 'off',
     'no-loop-func': 'off',
-    'no-magic-numbers': ['error', {
-      'ignore': [-1, 0, 1, 2, 10, 1024],
-      'enforceConst': true,
-    }],
+    'no-magic-numbers': [
+      'error',
+      {
+        ignore: [-1, 0, 1, 2, 10, 1024],
+        enforceConst: true,
+      },
+    ],
     'no-multi-spaces': 'off',
     'no-multi-str': 'off',
     'no-native-reassign': 'off',
@@ -67,9 +71,9 @@ module.exports = {
     'no-void': 'error',
     'no-warning-comments': 'off',
     'no-with': 'error',
-    'radix': ['error', 'as-needed'],
+    radix: ['error', 'as-needed'],
     'vars-on-top': 'off',
     'wrap-iife': ['error', 'outside'],
-    'yoda': ['error', 'never', { 'onlyEquality': true }]
+    yoda: ['error', 'never', { onlyEquality: true }],
   },
 };

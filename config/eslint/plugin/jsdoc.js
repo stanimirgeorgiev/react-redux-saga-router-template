@@ -1,7 +1,5 @@
 module.exports = {
-  'plugins': [
-    'jsdoc',
-  ],
+  plugins: ['jsdoc'],
   rules: {
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-tag-names': 'error',

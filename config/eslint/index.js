@@ -1,11 +1,11 @@
 module.exports = {
-  'settings': {
-    'react': {
-      'version': '16.0', // React version, default to the latest React stable release
+  settings: {
+    react: {
+      version: 'detect', // React version, default to the latest React stable release
     },
-    'propWrapperFunctions': [ 'forbidExtraProps' ]
+    propWrapperFunctions: ['forbidExtraProps'],
   },
-  'extends': [
+  extends: [
     // Environment specific configurations
     './core/nodejs-commonjs.js',
 
@@ -20,8 +20,7 @@ module.exports = {
 
     // Plugins
     './plugin/jsdoc.js',
-    './plugin/lodash.js',
     './plugin/react.js',
-    './plugin/a11y.js'
+    './plugin/a11y.js',
   ],
 };

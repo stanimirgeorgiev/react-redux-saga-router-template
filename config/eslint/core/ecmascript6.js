@@ -1,26 +1,26 @@
 module.exports = {
-  'env': {
-    'es6': true,
+  env: {
+    es6: true,
   },
-  'parser': 'babel-eslint',
-  'parserOptions': {
-    'ecmaVersion': 6,
-    'ecmaFeatures': {
-      'jsx': true,
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+    ecmaFeatures: {
+      jsx: true,
     },
-    'sourceType': 'module',
+    sourceType: 'module',
   },
   rules: {
     'arrow-body-style': 'off',
     'arrow-parens': 'off',
-    'arrow-spacing': ['error', { 'before': true, 'after': true }],
+    'arrow-spacing': ['error', { before: true, after: true }],
     'constructor-super': 'error',
-    'generator-star-spacing': ['error', { 'before': false, 'after': true }],
+    'generator-star-spacing': ['error', { before: false, after: true }],
     'no-class-assign': 'error',
-    'no-confusing-arrow': ['error', {'allowParens': true}],
+    'no-confusing-arrow': ['error', { allowParens: true }],
     'no-const-assign': 'error',
     'no-dupe-class-members': 'error',
-    'no-duplicate-imports': ['error', { 'includeExports': true }],
+    'no-duplicate-imports': ['error', { includeExports: true }],
     'no-new-symbol': 'error',
     'no-restricted-imports': 'off',
     'no-this-before-super': 'error',
@@ -30,7 +30,7 @@ module.exports = {
     'no-var': 'error',
     'object-shorthand': 'off',
     'prefer-arrow-callback': 'off',
-    'prefer-const': ['error', {'destructuring': 'any'}],
+    'prefer-const': ['error', { destructuring: 'any' }],
     'prefer-numeric-literals': 'off',
     'prefer-reflect': 'off',
     'prefer-rest-params': 'error',
