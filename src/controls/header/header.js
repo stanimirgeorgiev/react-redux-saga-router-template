@@ -10,7 +10,7 @@ export const Header = () => {
                 <div className="header-container">
                     <ul className="header-item-wrapper">
                         <li className="header-item" onClick={() => history.push('/')}>
-                            Home
+                            Tasks
                         </li>
                         <li className="header-item" onClick={() => history.push('/about')}>
                             About

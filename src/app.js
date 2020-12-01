@@ -1,5 +1,5 @@
 import React from 'react';
-import { rootComponents } from './config/app-factory';
+import { rootRoutes } from './config/app-factory';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Header } from './controls/header/header';
 
@@ -11,11 +11,9 @@ export const App = () => {
             <Router>
                 <Header />
                 <Switch>
-                    <Route exact path="/">
-                        {rootComponents.map((Component, index) => {
-                            return <Component key={index} />;
-                        })}
-                    </Route>
+                    {rootRoutes.map((AppRoute, index) => {
+                        return <AppRoute key={index} />;
+                    })}
                     <Route path="/about">About</Route>
                 </Switch>
             </Router>

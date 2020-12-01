@@ -18,6 +18,9 @@ module.exports = merge(config, {
                 secure: false,
             },
         },
+        historyApiFallback: {
+            index: 'index.html',
+        },
     },
     parallelism: 7,
     cache: true,
