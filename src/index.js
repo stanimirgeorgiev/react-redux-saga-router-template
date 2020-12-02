@@ -11,6 +11,7 @@ import './index.css';
 const appDomId = 'root';
 const rootContainer = document.getElementById(appDomId);
 const reactComponent = (
+  // eslint-disable-next-line react/jsx-filename-extension
   <RootProvider>
     <App />
   </RootProvider>

@@ -5,6 +5,9 @@ module.exports = {
     },
     propWrapperFunctions: ['forbidExtraProps'],
   },
+  env: {
+    'jest/globals': true,
+  },
   extends: [
     // Environment specific configurations
     './core/nodejs-commonjs.js',
