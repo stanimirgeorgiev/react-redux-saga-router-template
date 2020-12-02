@@ -34,7 +34,27 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      // options: {
+                      // },
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+        ],
         include: [path.resolve(rootDir)],
         exclude: [path.resolve(rootDir, 'node_modules')],
       },
