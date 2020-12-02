@@ -6,7 +6,7 @@ module.exports = {
     propWrapperFunctions: ['forbidExtraProps'],
   },
   env: {
-    'jest/globals': true,
+    jest: true,
   },
   extends: [
     // Environment specific configurations

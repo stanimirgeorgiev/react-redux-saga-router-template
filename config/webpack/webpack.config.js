@@ -1,27 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const { rootDir } = require('./webpack.const');
 
 module.exports = {
   context: rootDir,
+  mode: 'development',
   entry: {
     app: ['babel-polyfill', 'src/index.js'],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Simple Test App',
-      template: 'src/index.tpl.html',
-    }),
-    new StylelintPlugin({
-      configFile: path.resolve(rootDir, './config/css/stylelint.config.js'),
-      formatter: 'verbose',
-      lintDirtyModulesOnly: true,
-      cache: true,
-      cacheLocation: path.resolve(rootDir, './tmp'),
-    }),
-  ],
   output: {
     filename: '[name].bundle.[chunkhash].js',
     path: path.resolve(rootDir, 'build'),
@@ -92,11 +79,12 @@ module.exports = {
     ],
   },
   resolve: {
-    modules: [
-      '.',
-      // path.resolve(rootDir, '../test', 'js'),
-      path.resolve(rootDir, 'node_modules'),
-    ],
+    modules: ['.', path.resolve(rootDir, 'node_modules')],
   },
-  mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'React Template App',
+      template: 'src/index.tpl.html',
+    }),
+  ],
 };
