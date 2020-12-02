@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
 const { rootDir } = require('./webpack.const');
 
 module.exports = {
@@ -11,6 +13,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Simple Test App',
       template: 'src/index.tpl.html',
+    }),
+    new StylelintPlugin({
+      configFile: path.resolve(rootDir, './config/css/stylelint.config.js'),
+      formatter: 'verbose',
+      lintDirtyModulesOnly: true,
+      cache: true,
+      cacheLocation: path.resolve(rootDir, './tmp'),
     }),
   ],
   output: {
