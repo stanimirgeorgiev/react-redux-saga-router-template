@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
-    "lint": "npm run lint-js",
-    "lint-js": "eslint --ext .js .*.js *.js src/",
-    "fix": "eslint --ext .js .*.js *.js src/ --fix",
-    "fix:all": "eslint --ext .js .*.js *.js --fix",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint src/**/*.js",
+    "lint:css": "stylelint src/**/*.css",
+    "fix": "eslint src/**/*.js --fix",
     "test": "jest --coverage --config ./config/test/jest.config.js"
   },
   "repository": {
@@ -73,18 +73,28 @@
     "htmlparser2": "latest",
     "jest": "latest",
     "json-loader": "latest",
-    "postcss": "^8.1.10",
+    "postcss": "latest",
     "postcss-loader": "latest",
     "postcss-preset-env": "latest",
     "prop-types": "latest",
     "style-loader": "latest",
     "stylelint": "latest",
-    "stylelint-config-recommended": "latest",
-    "stylelint-webpack-plugin": "latest",
+    "stylelint-config-standard": "latest",
     "url-loader": "latest",
     "webpack": "latest",
     "webpack-cli": "latest",
     "webpack-dev-server": "latest",
     "webpack-merge": "latest"
+  },
+  "babel": {
+    "extends": "./config/babel/babel.config.js"
+  },
+  "stylelint": {
+    "extends": "./config/stylelint/stylelint.config.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./config/eslint/eslint.config.js"
+    ]
   }
 }
