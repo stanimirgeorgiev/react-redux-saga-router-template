@@ -1,6 +1,7 @@
 import React from 'react';
-import { rootRoutes } from '../config/app-factory';
 import { BrowserRouter as Router } from 'react-router-dom';
+
+import { rootRoutes } from '../config/app-factory';
 import { Header } from '../controls/header/header';
 
 import './app.css';
