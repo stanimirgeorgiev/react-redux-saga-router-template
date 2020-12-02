@@ -1,1 +1,1 @@
-export const tasksListRoute = '/home';
+export const tasksListRoute = '/';

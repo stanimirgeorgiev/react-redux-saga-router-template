@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --progress --color --config ./config/webpack/webpack.dev-server.js",
+    "build": "webpack --config ./config/webpack/webpack.production.js",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.js",
     "lint:css": "stylelint src/**/*.css",
@@ -80,6 +81,7 @@
     "style-loader": "latest",
     "stylelint": "latest",
     "stylelint-config-standard": "latest",
+    "terser-webpack-plugin": "^5.0.3",
     "url-loader": "latest",
     "webpack": "latest",
     "webpack-cli": "latest",
