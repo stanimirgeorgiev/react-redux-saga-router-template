@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchTasks } from '../actions/tasks-actions';
-import { TASKS_MODULE_NAME } from '../constants/common';
+import { TASKS_ID } from '../constants/common';
 
 import './tasks-list.css';
 
@@ -11,7 +11,7 @@ export const TasksList = () => {
     dispatch(fetchTasks());
   }, []);
 
-  const tasksData = useSelector(state => state[TASKS_MODULE_NAME].tasksData, shallowEqual);
+  const tasksData = useSelector(state => state[TASKS_ID].tasksData, shallowEqual);
   return (
     <div className="tasks-list">
       <div className="tasks-list__container">
