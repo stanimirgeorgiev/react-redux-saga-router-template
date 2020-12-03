@@ -1,5 +1,7 @@
 # React, redux, redux-saga and router boilerplate
 
+![CI build](https://github.com/stanimirgeorgiev/react-redux-saga-router-template/workflows/CI%20build/badge.svg)
+
 This repo is a :construction: :construction: :construction: `permanent work in progress` :construction: :construction: :construction: which aims to create a repository with the most recent packages and technologies of the react environment that will allow the developer to quickly start a **production ready** [SPA](https://en.wikipedia.org/wiki/Single-page_application) frontend react app.
 
 ## General information
