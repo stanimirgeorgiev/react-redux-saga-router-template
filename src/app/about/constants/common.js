@@ -1,1 +1,1 @@
-export const ABOUT_MODULE_NAME = 'about';
+export const ABOUT_ID = 'about';
