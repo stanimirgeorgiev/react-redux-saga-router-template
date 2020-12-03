@@ -9,8 +9,6 @@ module.exports = merge(baseWebpack, {
     mangleWasmImports: true,
     minimizer: [
       new TerserPlugin({
-        // cache: false,
-        // sourceMap: false,
         parallel: true,
         extractComments: true,
         terserOptions: {
