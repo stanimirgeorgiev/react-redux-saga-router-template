@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchTasks } from '../actions/tasks-actions';
+import { TASKS_MODULE_NAME } from '../constants/common';
 
 import './tasks-list.css';
 
@@ -9,7 +10,8 @@ export const TasksList = () => {
   useEffect(() => {
     dispatch(fetchTasks());
   }, []);
-  const tasks = useSelector(state => state.tasks.tasksData, shallowEqual);
+
+  const tasksData = useSelector(state => state[TASKS_MODULE_NAME].tasksData, shallowEqual);
   return (
     <div className="tasks-list">
       <div className="tasks-list__container">
@@ -19,7 +21,7 @@ export const TasksList = () => {
           </div>
         </h3>
         <ul>
-          {tasks?.map((task, index) => {
+          {tasksData?.map((task, index) => {
             return <li key={index}>Title: {task.title}</li>;
           })}
         </ul>

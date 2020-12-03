@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-import * as bundle from '../app/app-loader';
+import appModules from './app-loader';
 
-const appModuleNames = Object.keys(bundle);
+const appModuleNames = Object.keys(appModules);
 
 let appReducers = {};
 let appActions = {};
@@ -12,8 +12,8 @@ const appComponents = [];
 const appRoutes = [];
 
 appModuleNames.forEach(moduleName => {
-  const appModule = bundle[moduleName];
-  const { reducer = (state = {}) => state, sagas = [], actions, component, route, path } = appModule.default;
+  const appModule = appModules[moduleName];
+  const { reducer = (state = {}) => state, sagas = [], actions, component, route, path } = appModule;
   appReducers = { ...appReducers, [moduleName]: reducer };
   appActions = { ...appActions, [moduleName]: actions };
   appPaths = { ...appPaths, [moduleName]: path };

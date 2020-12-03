@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { rootPaths } from '../../config/app-factory';
+import { rootPaths } from '../../../app/app-factory';
 import './header.css';
 
 export const Header = () => {
