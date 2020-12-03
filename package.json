@@ -30,7 +30,6 @@
   "homepage": "https://github.com/stanimirgeorgiev/Test-React-Redux-Redux-Saga-App#readme",
   "dependencies": {
     "axios": "latest",
-    "corejs": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "latest",
@@ -40,6 +39,7 @@
     "redux-saga": "latest"
   },
   "devDependencies": {
+    "corejs": "latest",
     "@babel/preset-env": "latest",
     "babel": "latest",
     "babel-loader": "latest",
