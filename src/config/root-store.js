@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose } from 'redux';
 import PropTypes from 'prop-types';
 
-import { rootReducers } from '../app/app-factory';
+import { rootReducers } from './app-factory';
 import { sagaMiddleware } from './root-sagas';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
