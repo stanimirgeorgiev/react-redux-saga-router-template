@@ -3,7 +3,7 @@ module.exports = {
   rootDir: '../..',
   setupFiles: ['./config/test/test-shim.js'],
   testRegex: '/.*\\.test\\.js?$',
-  coverageReporters: ['text-summary'],
+  coverageReporters: ['text-summary', 'lcov'],
   verbose: true,
   transform: {
     '^.+\\.(js|jsx)$': '<rootDir>/node_modules/babel-jest',

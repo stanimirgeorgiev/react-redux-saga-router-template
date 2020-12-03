@@ -6,3 +6,4 @@ dist
 .travis.yml
 debug.log
 build
+coverage
