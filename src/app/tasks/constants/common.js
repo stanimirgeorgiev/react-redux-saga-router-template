@@ -1,1 +1,1 @@
-export const TASKS_MODULE_NAME = 'tasks';
+export const TASKS_ID = 'tasks';
