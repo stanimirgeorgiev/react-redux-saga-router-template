@@ -10,10 +10,10 @@ export const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="header-container">
-          <ul className="header-item-wrapper">
+        <div className="header__container">
+          <ul className="header__item__wrapper">
             <li
-              className="header-item"
+              className="header__item"
               onClick={() => history.push(rootPaths.tasks)}
               onKeyPress={() => {}}
               role="presentation"
@@ -21,7 +21,7 @@ export const Header = () => {
               Tasks
             </li>
             <li
-              className="header-item"
+              className="header__item"
               onClick={() => history.push(rootPaths.about)}
               onKeyPress={() => {}}
               role="presentation"

@@ -39,20 +39,12 @@ module.exports = {
             options: {
               sourceMap: true,
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // options: {
-                      // },
-                    },
-                  ],
-                ],
+                config: path.resolve(rootDir, './config/postcss/postcss.config.js'),
               },
             },
           },
         ],
-        include: [path.resolve(rootDir)],
+        include: [path.resolve(rootDir, 'src')],
         exclude: [path.resolve(rootDir, 'node_modules')],
       },
       {
@@ -81,6 +73,9 @@ module.exports = {
   },
   resolve: {
     modules: ['.', path.resolve(rootDir, 'node_modules')],
+    alias: {
+      'common-styles': path.resolve(rootDir, './src/app/common/styles'),
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),

@@ -1,0 +1,9 @@
+@import '../../../common/styles/layout';
+
+.about__container {
+  @include .container;
+}
+
+.about__header {
+  @include .header;
+}

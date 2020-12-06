@@ -1,0 +1,9 @@
+@import '../../../common/styles/layout';
+
+.tasks-list__container {
+  @include .container;
+}
+
+.tasks-list__header {
+  @include .header;
+}

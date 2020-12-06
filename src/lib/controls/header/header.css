@@ -1,14 +1,16 @@
-.header-item-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.header {
+  &__item {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 2px;
 
-.header-item {
-  cursor: pointer;
-  padding: 5px;
-  margin: 5px;
-  background-color: lightgray;
-  border: 1px solid gray;
-  border-radius: 2px;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
