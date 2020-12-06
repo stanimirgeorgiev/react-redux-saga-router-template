@@ -1,9 +1,8 @@
 # Ignore various temporary directories
 node_modules
-npm-debug.log
 .idea
 dist
 .travis.yml
-debug.log
+*.log
 build
 coverage

@@ -5,9 +5,9 @@ name: build
 
 on:
   push:
-    branches: [create-react-redux-saga-template, master]
+    branches: [master]
   pull_request:
-    branches: [create-react-redux-saga-template, master]
+    branches: [master]
 
 jobs:
   build:
