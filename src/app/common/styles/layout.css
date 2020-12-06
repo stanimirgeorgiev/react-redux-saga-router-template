@@ -1,4 +1,4 @@
-.about__container {
+.container {
   margin: 10px auto;
   top: 50px;
   padding: 10px;
@@ -6,7 +6,7 @@
   border-radius: 5px;
 }
 
-.about__header {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
