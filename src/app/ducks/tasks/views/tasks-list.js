@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchTasks } from '../actions/tasks-actions';
 import { TASKS_ID } from '../constants/common';
 
 import './tasks-list.css';
 
-export const TasksList = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchTasks());
-  }, []);
+const TasksListView = ({ tasksData }) => {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchTasks());
+  // }, []);
 
-  const tasksData = useSelector(state => state[TASKS_ID].tasksData, shallowEqual);
+  // const tasksData = useSelector(state => state[TASKS_ID].tasksData, shallowEqual);
   return (
     <div className="tasks-list">
       <div className="tasks-list__container">
@@ -28,4 +30,18 @@ export const TasksList = () => {
       </div>
     </div>
   );
+};
+
+TasksListView.propTypes = {
+  tasksData: PropTypes.arrayOf(PropTypes.shape({ title: PropTypes.string })),
+};
+
+export const TasksList = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchTasks());
+  }, []);
+
+  const tasksData = useSelector(state => state[TASKS_ID].tasksData, shallowEqual);
+  return <TasksListView tasksData={tasksData} />;
 };

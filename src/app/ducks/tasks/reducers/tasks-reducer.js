@@ -5,7 +5,7 @@ const initialTasksState = {
   taskWasCompleted: {},
 };
 
-export const tasks = (state = initialTasksState, action) => {
+export const tasks = (state = initialTasksState, action = {}) => {
   const { type, payload } = action;
 
   switch (type) {

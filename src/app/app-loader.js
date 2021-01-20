@@ -1,8 +1,5 @@
-import About from './ducks/about';
-import { ABOUT_ID } from './ducks/about/constants/common';
-
-import Tasks from './ducks/tasks';
-import { TASKS_ID } from './ducks/tasks/constants/common';
+import About, { ABOUT_ID } from './ducks/about';
+import Tasks, { TASKS_ID } from './ducks/tasks';
 
 export default {
   [TASKS_ID]: Tasks,

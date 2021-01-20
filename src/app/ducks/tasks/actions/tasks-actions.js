@@ -21,6 +21,13 @@ export const fetchTasks = () => {
   };
 };
 
+export const navigateToTasks = () => {
+  return {
+    type: ActionTypes.FETCH_TASKS_SAGA,
+    payload: {},
+  };
+};
+
 export const tasksActions = {
   completeUserTask,
   tasksReceived,

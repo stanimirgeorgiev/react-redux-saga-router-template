@@ -1,11 +1,12 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { history } from '../../../app/app';
+// import { useHistory } from 'react-router-dom';
 
 import { rootPaths } from '../../../config/app-factory';
 import './header.css';
 
 export const Header = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <>

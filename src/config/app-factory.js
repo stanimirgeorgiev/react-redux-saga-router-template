@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux';
-
 import appModules from '../app/app-loader';
 
 const appModuleNames = Object.keys(appModules);
@@ -22,7 +20,7 @@ appModuleNames.forEach(moduleName => {
   appRoutes.push(route);
 });
 
-export const rootReducers = combineReducers(appReducers);
+export const rootReducers = appReducers;
 export const rootSagas = appSagas;
 export const rootActions = appActions;
 export const rootComponents = appComponents;
