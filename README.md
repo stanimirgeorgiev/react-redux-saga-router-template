@@ -145,12 +145,12 @@ The <code>index.js</code> then <code>export default</code> an object with partic
 
 ## Motivation
 
-To have a "plugin" like structure which will leave as little as possible if view is deleted
+To use a "plugin" like structure which will leave as little as possible if a module is deleted
 
 <details>
 <summary>more about motivation</summary>
 <blockquote>
-That pattern will allow the developer to quickly create a new view in one space, following one design patterns and not having to browse throughout numerous folders to add/edit actions or reducers or something else. Using this pattern reduce the 'time to wondering' of the developer where exactly to put something :smile:. It should also lower the file sizes.
+That pattern will allow to quickly create a new view in one space, following one design pattern and not having to browse throughout numerous folders to add/edit actions or reducers or something else. Using this pattern reduce the 'time to wondering' where exactly to put something :smile:. It should also lower the file sizes.
 </blockquote>
 </details>
 
